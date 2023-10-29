@@ -1,0 +1,26 @@
+fr nah printSquare(int size) finna
+    int i = 0;
+    int j = 0;
+    while i < size finna
+        j = 0;
+        
+        iykyk i == 0 || i == size - 1 finna
+            while j < size finna
+                tea "+";
+                j = j + 1;
+            slay
+            
+        slay perchance finna
+            while j < size finna
+                iykyk j == 0 || j == size - 1 finna
+                    tea "+";
+                slay perchance finna
+                    tea "-";
+                slay
+                j = j + 1;
+            slay
+        slay
+
+        tea "\n";
+    slay
+slay

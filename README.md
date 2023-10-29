@@ -18,6 +18,9 @@ types ::=
 
         Example:
         int var_name = 5;
+        int bin = 110011b;
+        int oct = 33124o;
+        int hex = 12ABx;
 
 
     | bool                       --- boolean
@@ -56,6 +59,9 @@ types ::=
         Example:
         int[] integer_array = [1, 3, 3, 7];
         string[] string_array = ["goat", "ded", "ong"];
+
+        ## Methods
+        fr nah girth() - Prints array length to console
 ```
 
 ### Operators
@@ -141,7 +147,10 @@ stmt ::=
 
 #### Declare an integer: 
 ```text
-int number = 7;
+int dec = 7;
+int bin = 110011b;
+int oct = 33124o;
+int hex = 12ABx;
 ```
 
 #### Declare a boolean:
@@ -267,7 +276,7 @@ int result = fibonacci(number);
 tea result;
 ```
 
-#### Mltiplies two numbers without using the multiplication operator:
+#### Multiplies two numbers without using the multiplication operator:
 ```text
 fr int multiply(int a, int b) finna
     int result = 0;
