@@ -35,9 +35,9 @@ defmodule Ytgl.Lexer do
 
     # Check if the next token is '[]' to identify array types
     case rest do
-      ["[]" | rest] ->
+      ["[","]" | rest] ->
         # Include the data type in the literal of the array token
-        literal = identifier <> "[]"
+        literal = identifier
         token = Token.new(type: :array, literal: literal)
         tokenize(rest, [token | tokens])
 
