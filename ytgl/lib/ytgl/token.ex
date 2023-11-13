@@ -34,6 +34,7 @@ defmodule Ytgl.Token do
     # Loop statements
     "while" => :while,
     "vibe" => :do_while,
+    "for" => :for,
 
     # Functions
     "fr" => :function,
@@ -101,6 +102,7 @@ defmodule Ytgl.Token do
 
       while: "WHILE",
       vibe: "DO_WHILE",
+      for: "FOR",
 
       return: "RETURN",
       null: "NULL",

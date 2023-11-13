@@ -10,3 +10,7 @@ YTGL interpreter written in Elixir
 mix escript.build     # Build the executable program
 ./ytgl PATH_TO_FILE   # Run compiled program with a file to interpret
 ```
+
+```bash
+mix test              # Run tests
+```
