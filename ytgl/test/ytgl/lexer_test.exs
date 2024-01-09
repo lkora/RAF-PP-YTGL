@@ -85,16 +85,31 @@ defmodule Ytgl.LexerTest do
 
   end
 
-  test "converts a fibonacci function into a list of tokens" do
+  test "print a square of size with edges from + and - inside" do
     input = """
-    fr int fibonacci(int n) finna
-        iykyk n <= 1 finna
-            itsGiving n;
-        slay perchance finna
-            itsGiving fibonacci(n - 1) + fibonacci(n - 2);
+    fr nah printSquare(int size) finna
+        int i = 0;
+        int j = 0;
+        while i < size finna
+            j = 0;
+            iykyk i == 0 || i == size - 1 finna
+                while j < size finna
+                    tea "+";
+                    j = j + 1;
+                slay
+            slay perchance finna
+                while j < size finna
+                    iykyk j == 0 || j == size - 1 finna
+                        tea "+";
+                    slay perchance finna
+                        tea "-";
+                    slay
+                    j = j + 1;
+                slay
+            slay
+            tea "\n";
         slay
     slay
-
     """
 
     expected = [
@@ -189,7 +204,7 @@ defmodule Ytgl.LexerTest do
       %Token{type: :end_block, literal: "slay"},
       %Token{type: :end_block, literal: "slay"},
       %Token{type: :ident, literal: "tea"},
-      %Token{type: :string, literal: "\\n"},
+      %Token{type: :string, literal: "\n"},
       %Token{type: :semicolon, literal: ";"},
       %Token{type: :end_block, literal: "slay"},
       %Token{type: :end_block, literal: "slay"},
