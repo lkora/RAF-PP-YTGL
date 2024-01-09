@@ -1,0 +1,48 @@
+S' -> S
+S -> main BLOCK
+BLOCK -> { SN }
+SN -> SN N ;
+SN -> N ;
+N -> IN
+N -> OUT
+N -> DECL
+N -> ASS
+N -> IF
+IN -> scan id
+OUT -> print OUTABLE
+OUTABLE -> id
+OUTABLE -> string
+DECL -> TYPE id
+TYPE -> int
+TYPE -> char
+ASS -> id = EXPR
+EXPR -> character
+EXPR -> EXPR OP1 EXPR1
+EXPR -> EXPR1
+EXPR1 -> EXPR1 OP2 EXPR2
+EXPR1 -> EXPR2
+EXPR2 -> integer
+EXPR2 -> id
+OP1 -> +
+OP1 -> -
+OP2 -> *
+OP2 -> /
+OP2 -> %
+IF -> if ( CONDITION ) BLOCK
+IF -> if ( CONDITION ) BLOCK ELIF
+CONDITION -> CONDITION LOG COND
+CONDITION -> COND
+LOG -> &&
+LOG -> ||
+CONDITION -> ! CONDITION
+COND -> CND OP3 CND
+COND -> CND between CND and CND
+CND -> id
+CND -> integer
+CND -> character
+OP3 -> ==
+OP3 -> <>
+OP3 -> <
+OP3 -> <=
+OP3 -> >
+OP3 -> >=
